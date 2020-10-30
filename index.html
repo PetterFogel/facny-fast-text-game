@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fancy & Fast - Text Game</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+     <div id="game-story">
+        <div class="intro">
+            <h1 id="title">Fancy or Fast</h1>
+            <p id="sub-title">Please enter name</p>
+
+            <input type="text" id="user-input" class="input-style">
+            <input type="submit" class="btn" id="user-submit" value="Submit">
+        <!-- Option buttons -->
+            <button id="btn" class="btn hidden">FirstButton</button>
+            <button id="btn2" class="btn hidden">secondButton</button>
+        </div>
+        <!-- Fancy restaurant scene -->
+        <div id="fancy-restaurant" class="hidden">
+            <input type="text" id="dish-input" class="input-style">
+            <input type="submit" class="btn" id="dish-submit" value="Submit" onclick="fancyRestauratMenu()">
+        </div>
+        <!-- Fast food restaurant scen -->
+        <div id="fast-restaurant" class="hidden">
+            <input type="text" id="fast-input" class="input-style">
+            <input type="submit" class="btn" id="dish-submit" value="Submit" onclick="fastFoodRestaurantScene()">
+        </div>
+    </div>
+</body>
+</html>
