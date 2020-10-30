@@ -1,18 +1,23 @@
-// Variables
-// Fetch ID:s from HTML
+/** Varibales fetching id:s from HTML */
+/** @type {HTMLHeadingElement} h1 tag. */
 const title = document.getElementById("title");
+/** @type {HTMLParagraphElement} Paragraph tag. */
 const subTitle = document.getElementById("sub-title");
+/** @type {HTMLButtonElement} Button. */
 const firstButton = document.getElementById("btn");
+/** @type {HTMLButtonElement} Button. */
 const secondButton = document.getElementById("btn2");
+/** @type {HTMLInputElement} User input. */
 const userInput = document.getElementById("user-input");
+/** @type {HTMLButtonElement} Button */
 const submitButton = document.getElementById("user-submit");
+/** @type {HTMLDivElement} Div with inputs. */
 const fancyDiv = document.getElementById("fancy-restaurant");
+/** @type {HTMLDivElement} Div with inputs. */
 const fastDiv = document.getElementById("fast-restaurant");
-// const dishSubmit = document.getElementById("dish-submit");
-
+/** User name */
 let username = "";
 
-// Enter name before starting game
 /** Starts program when clicking button */
 submitButton.onclick = function() {
     username = userInput.value;
@@ -32,10 +37,8 @@ function introWelcome() {
 
     userInput.classList.add("hidden");
     submitButton.classList.add("hidden");
-
 }
 
-// Choose restaurant
 /** Choose to eat at a fancy restaurant or a fastfood restaurant. */
 function startFunction() {
     title.innerText = "";
@@ -80,7 +83,6 @@ function regretFastFoodRestaurantOption() {
     }
 }
 
-// Fancy restaurant scene
 /** Fancy restaurant scene start. */
 function fancyRestauratMenu() {
     subTitle.innerText = fancyRestaurantWelcome;
@@ -93,6 +95,7 @@ function fancyRestauratMenu() {
 
 /** Dish menu for fancy restaurant scene. */
 function handleFancyRestaurantChoice() {
+    /** @type {HTMLInputElement} Input field. */
     const dishInput = document.getElementById("dish-input").value;
     const fancyMenu = ["pizza", "paella", "pasta"]
 
@@ -107,7 +110,6 @@ function handleFancyRestaurantChoice() {
     }
 }
 
-//Fastfood restaurant scene 
 /** Fastfood restaurant scene start. */
 function fastFoodRestaurantScene() {
     subTitle.innerText = fastfoodWelcome;
@@ -118,8 +120,9 @@ function fastFoodRestaurantScene() {
     handleFastRestaurantChoice();
 }
 
-/** Dish menu for fastfood restaurant scene. */
+/** Dish menu for fastfood restaurant scene start. */
 function handleFastRestaurantChoice() {
+    /** @type {HTMLInputElement} Input field. */
     const fastDishInput = document.getElementById("fast-input").value;
     const fastfoodMenu = ["cheeseburger", "doubleburger", "veganburger"]
 
@@ -134,7 +137,6 @@ function handleFastRestaurantChoice() {
     }
 }
 
-// Last Scene
 /** Endning scene, when button is clicked the page refreshes to starting point. */
 function restaurantClosing() {
     subTitle.innerText = gameExit;
@@ -148,13 +150,12 @@ function restaurantClosing() {
     }
 }
 
-// Paragraphs made into variables
-// Intro
+/** Paragraphs made into variables. */
+/** @type {innerHTML} Paragraph for intro. */
 const subTitleIntro = "You are very hungry and you want to go out and eat some food. Do you want to eat at a fancy restaurant or a fastfood restaurant?";
-// Fancy restaurant scene paragraphs
+/** @type {innerHTML} Paragraph for fancy restaurant scene. */
 const fancyRestaurantWelcome = "You enter a nice restaurant with light candles and soothing music. You get a menu from a waiter. You got 3 options. Do you want to order pizza, paella or pasta?";
-// Fastfood restaurant scene paragraphs
+/** @type {innerHTML} Paragraph for fastfood restaurant scene. */
 const fastfoodWelcome = "At the fastfood restaurant there are kids screamning everywhere and a big queue to the counter. When it's your turn to order you have 3 options. Do you want to order cheeseburger, doubleburger or veganburger.";
-// Outro
+/** @type {innerHTML} Paragraph for outro. */
 const gameExit = "After a nice meal it's time to go home. Thanks for playing!";
-
